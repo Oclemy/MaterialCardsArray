@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- ActivityMain.xml layout.
+- Our MainActivity Layout.
+- Root tag is ConstraintLayout ViewGroup.
+- We then add MaterialListView, which is a child of RecyclerView.
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tutorials.hp.materialarray.MainActivity">
+
+    <com.dexafree.materialList.view.MaterialListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/material_listview"/>
+
+</android.support.constraint.ConstraintLayout>

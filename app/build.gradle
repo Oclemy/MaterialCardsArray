@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+/*
+- Our app level build.gradle file.
+- We specify compilesdk,minimum sdk,target sdk and dependencies.
+- Note that the minimum sdk for this project isn't that strict,it is much lower than that specified below.
+- We also add dependencies using 'compile' statement.
+- Our activity shall derive from the appCompatActivity to make it target earlier android versions.
+- We also specify constraint-library as our activity_main.xml will use it as the root tag.
+- Finally we add the com.github.dexafree:materiallist which which is a third party library built on top of Recycleriew. We'll use it
+to create amazing Cards.
+ */
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.tutorials.hp.materialarray"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    compile 'com.github.dexafree:materiallist:3.2.1'
+
+}
